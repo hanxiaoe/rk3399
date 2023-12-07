@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_rk3399_mid.mk
+    $(LOCAL_DIR)/omni_rk3399_all.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_rk3399_mid-user \
-    twrp_rk3399_mid-userdebug \
-    twrp_rk3399_mid-eng
+    omni_rk3399_all-user \
+    omni_rk3399_all-userdebug \
+    omni_rk3399_all-eng

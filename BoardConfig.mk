@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/rockchip/rk3399_mid
+DEVICE_PATH := device/rockchip/rk3399_all
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -33,7 +33,7 @@ TARGET_BOOTLOADER_BOARD_NAME := rk30sdk
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 280
+TARGET_SCREEN_DENSITY := 240
 
 # Kernel
 BOARD_KERNEL_BASE := 0x60400000
@@ -44,8 +44,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0xffc88000
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := rk3399_mid_defconfig
-TARGET_KERNEL_SOURCE := kernel/rockchip/rk3399_mid
+TARGET_KERNEL_CONFIG := rk3399_all_defconfig
+TARGET_KERNEL_SOURCE := kernel/rockchip/rk3399_all
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true

@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=rk3399_mid
+DEVICE=rk3399_all
 VENDOR=rockchip
 
 # Load extract_utils and do some sanity checks

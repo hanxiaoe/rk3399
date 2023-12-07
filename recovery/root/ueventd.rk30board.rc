@@ -54,22 +54,22 @@
 
 # for BT
 /dev/vflash               0660   bluetooth  net_bt_stack
-/dev/ttyS0                0660   bluetooth  net_bt_stack
-/dev/ttyS1                0660   bluetooth  net_bt_stack
+#/dev/ttyS0                0660   bluetooth  net_bt_stack
+#/dev/ttyS1                0660   bluetooth  net_bt_stack
 #/dev/ttyS2                0660   bluetooth  net_bt_stack
 /dev/rtk_btusb            0660   bluetooth  net_bt_stack
 
 # for radio
-/dev/ttyUSB0              0660   radio		radio
-/dev/ttyUSB1              0660   radio		radio
-/dev/ttyUSB2              0660   radio		radio
-/dev/ttyUSB3              0660   radio		radio
-/dev/ttyUSB4              0660   radio		radio
-/dev/ttyUSB5              0660   radio		radio
-/dev/ttyUSB6              0660   radio		radio
-/dev/ttyUSB7              0660   radio		radio
-/dev/ttyUSB8              0660   radio		radio
-/dev/ttyUSB9              0660   radio		radio
+/dev/ttyUSB0              0666   radio		radio
+/dev/ttyUSB1              0666   radio		radio
+/dev/ttyUSB2              0666   radio		radio
+/dev/ttyUSB3              0666   radio		radio
+/dev/ttyUSB4              0666   radio		radio
+/dev/ttyUSB5              0666   radio		radio
+/dev/ttyUSB6              0666   radio		radio
+/dev/ttyUSB7              0666   radio		radio
+/dev/ttyUSB8              0666   radio		radio
+/dev/ttyUSB9              0666   radio		radio
 
 # for mali-t764
 /dev/mali0           	  0666   system   	 system
@@ -401,8 +401,19 @@
 /dev/block/rknand_frp 0660 system system
 /dev/block/platform/1021c000.rksdmmc/by-name/frp 0660 system system
 
+#for baseparameter function
+/dev/block/by-name/baseparameter 0660 system system
 /dev/cpu_state 0666 system system
 /dev/chip_state 0666 system system
 /dev/i2c-1 0660 system system
 #for ovr
 /dev/ovr0		  0664   system          system
+
+#for ACM
+/dev/ttyACM*		0666	system	system
+
+#for ttyS*
+/dev/ttyS*			0666 	system  system
+
+#for sound card
+/dev/snd/pcm*       0777    system  audio
